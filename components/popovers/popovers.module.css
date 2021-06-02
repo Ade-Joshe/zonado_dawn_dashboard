@@ -1,0 +1,141 @@
+.dropdown {
+    position: absolute;
+    right: 0;
+    top: 110%;
+    min-width: 200px;
+    background: white;
+    z-index: 9;
+    margin-top: 0.3rem;
+    border: 1px solid #dfe3eb;
+    box-shadow: 0 0 12px 0 rgba(15, 44, 65, 0.2);
+    border-radius: 4px;
+    transition-duration: 0.2s !important;
+}
+
+.dropdown:not(.showDropDown) {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.dropdown.showDropDown {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* profile dropdown */
+
+.profileDropdown ul {
+    list-style-type: none;
+    margin: 0.6rem 0;
+}
+
+.profileDropdown ul li {
+    display: flex;
+    cursor: pointer;
+    padding: 0.5rem 1.6rem;
+    margin: 0.2rem 0;
+    opacity: 0.9;
+    font-size: 0.9rem;
+    transition-duration: 0.2s;
+}
+
+.profileDropdown ul li:hover {
+    background-color: #f4f6fa;
+    color: #385074;
+    opacity: 1;
+}
+
+/* Notification Dropdown */
+
+.notificationDropDown {
+    min-width: 320px;
+    padding: 1rem;
+    height: auto;
+}
+
+.notificationDropDown button {
+    margin-top: 1rem;
+}
+
+.notificationCard>:first-child {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.2rem;
+}
+
+.notificationCard>:first-child>p {
+    font-weight: 700;
+    opacity: 0.7;
+}
+
+.activeNotificationHeader {
+    font-size: 1.2rem !important;
+    opacity: 1 !important;
+}
+
+.notificationCard>:first-child :first-child {
+    margin-right: 0.6rem;
+}
+
+.notificationCard>:last-child {
+    color: #6f839c;
+    margin-bottom: 1rem;
+    font-size: small;
+}
+
+/* floating Button */
+
+.floatingButton {
+    top: -13rem;
+    bottom: unset;
+    right: 1.6rem;
+    min-width: 160px !important;
+    margin-bottom: 2rem;
+    border: 1px solid #dfe3eb;
+    box-shadow: 0 0 12px 0 rgba(15, 44, 65, 0.2);
+}
+
+.floatingButton ul {
+    list-style-type: none;
+}
+
+.floatingButton li, .scheduleOptions li {
+    display: flex;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    opacity: 0.6;
+    color: #0a1a25;
+    align-items: center;
+    transition-duration: 0.2s;
+}
+
+.floatingButton li:hover, .scheduleOptions li:hover {
+    background-color: #f4f6fa;
+    opacity: 1;
+    color: #0a1a25;
+}
+
+.floatingButton li :last-child {
+    margin-left: 0.6rem;
+    font-size: 0.9rem;
+}
+
+/* schedule options */
+
+.scheduleOptions {
+    top: 100%;
+    right: 0;
+    min-width: 120px;
+    margin-top: 0.5rem;
+}
+
+.scheduleOptions ul {
+    list-style-type: none;
+}
+
+@media (max-width: 478px) {
+    .notificationDropDown {
+        min-width: 280px !important;
+        right: -5rem;
+    }
+}

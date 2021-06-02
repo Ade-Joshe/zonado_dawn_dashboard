@@ -1,0 +1,44 @@
+[
+    {
+        "time": "9 AM",
+        "isActive": true,
+        "schedule": "Task Review"
+    },
+    {
+        "time": "10 AM",
+        "isActive": false,
+        "hasNext": true,
+        "schedule": "Prepare Orders"
+    },
+    {
+        "time": "11 AM",
+        "isActive": false,
+        "hasPrev": true,
+        "schedule": ""
+    },
+    {
+        "time": "12 AM",
+        "isActive": false,
+        "schedule": "Update Website"
+    },
+    {
+        "time": "1 PM",
+        "isActive": false,
+        "schedule": ""
+    },
+    {
+        "time": "2 PM",
+        "isActive": false,
+        "schedule": "Skype with Jason"
+    },
+    {
+        "time": "3 PM",
+        "isActive": false,
+        "schedule": ""
+    },
+    {
+        "time": "4 PM",
+        "isActive": false,
+        "schedule": "Send Orders"
+    }
+]

@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "title": "AudioHunt",
+        "time": "1:34pm",
+        "messageTitle": "New music is out! ",
+        "messageBody": "The playlist made just for you, every Friday."
+    },
+    {
+        "id": 2,
+        "title": "Domains R Us",
+        "time": "12:52pm",
+        "messageTitle": "Your domain will expire soon ",
+        "messageBody": "Your domain “nicehats.com” is set to expire"
+    },
+    {
+        "id": 3,
+        "title": "Google Accounts",
+        "time": "9:39am",
+        "messageTitle": "Security alert",
+        "messageBody": "A new device from New York has signed in"
+    }
+]

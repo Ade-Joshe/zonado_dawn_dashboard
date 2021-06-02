@@ -1,9 +1,7 @@
-html,
-body {
+html, body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #f4f6fa;
 }
 
 a {
@@ -12,5 +10,97 @@ a {
 }
 
 * {
+  padding: 0;
+  margin: 0;
+  font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   box-sizing: border-box;
+  transition: all 0.35s ease-in-out;
+}
+
+p {
+  font-size: 15px;
+}
+
+#__next {
+  display: flex;
+}
+
+main {
+  width: calc(100% - 220px);
+  margin-left: auto;
+  transition: none;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  stroke: 2px solid white;
+}
+
+.primary {
+  background-color: #245fff;
+}
+
+.secondary {
+  background-color: #f4f6fa;
+}
+
+.divider {
+  width: 90%;
+  display: flex;
+  margin: auto;
+  border-top: 1px solid #dfe3eb;
+}
+
+.fab_block {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.fab_block .floatingButton {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  border: 1px solid #dfe3eb;
+  color: rgba(0, 0, 0, 0.548);
+  box-shadow: 1px 0 5px 0 rgba(0, 0, 0, 0.05);
+}
+
+.rotate45 {
+  transform: rotate(45deg);
+}
+
+.scheduler_button {
+  display: flex;
+  position: relative;
+}
+
+.scheduler_button> :nth-child(2) {
+  margin-left: 1rem !important;
+}
+
+.showMenu {
+  left: 0px !important;
+  z-index: 1;
+}
+
+@media (max-width: 992px) {
+  aside {
+    transition: 0.2s ease-in-out !important;
+    left: -220px !important;
+  }
+  main {
+    width: 100% !important;
+  }
 }

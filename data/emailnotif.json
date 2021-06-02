@@ -1,0 +1,17 @@
+[
+    {
+        "isNew": true,
+        "title": "Email snooze",
+        "body": "Emails can now be snoozed to be seen at a later time."
+    },
+    {
+        "isNew": false,
+        "title": "Smarter Tasks",
+        "body": "Tasks are now upgraded with a whole bunch more features to make it easier."
+    },
+    {
+        "isNew": false,
+        "title": "No Contact Limit",
+        "body": "You wanted no limit on the contact list, and delivered! The contact list is now unlimited."
+    }
+]

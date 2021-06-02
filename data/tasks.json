@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Fix CSS styling on mobile",
+        "body": "Link styles have the wrong colours on mobile, titles…",
+        "isUrgent": true
+    },
+    {
+        "title": "Fix javascript filtering issue",
+        "body": "there is a filtering issue on the customers page",
+        "isUrgent": false
+    },
+    {
+        "title": "Change homepage illustration",
+        "body": "",
+        "isUrgent": true
+    },
+    {
+        "title": "Send monthly invoices",
+        "body": "",
+        "isUrgent": false
+    },
+    {
+        "title": "Help support with tickets",
+        "body": "Ask Jamie which ones are most urgent",
+        "isUrgent": false
+    },
+    {
+        "title": "Recalculate MRR",
+        "body": "",
+        "isUrgent": false
+    }
+]

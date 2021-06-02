@@ -1,0 +1,106 @@
+.aside {
+    position: fixed;
+    width: 220px;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    border-right: 1px solid #dfe3eb;
+    box-shadow: 1px 0 5px 0 rgba(0, 0, 0, 0.05);
+    transition: none;
+}
+
+.aside> :first-child {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 1.3rem 1.6rem;
+}
+
+.aside> :first-child> :last-child {
+    opacity: 0.17;
+    cursor: pointer;
+    margin-bottom: 0.2rem;
+}
+
+.aside> :first-child> :last-child:hover {
+    opacity: 0.9;
+}
+
+.aside>section {
+    border-bottom: 1px solid #dfe3eb;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.aside>section:last-child {
+    margin-top: auto;
+    border: none;
+    border-top: 1px solid #dfe3eb;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.aside>section ul {
+    padding: 0;
+    list-style: none;
+}
+
+.aside>section ul li, .sidebarItem {
+    display: flex;
+    cursor: pointer;
+    padding: 0.5rem 1.6rem;
+    margin: 0.2rem 0;
+    opacity: 0.6;
+}
+
+.aside>section ul li:hover {
+    opacity: 1;
+    color: #0a1a25;
+}
+
+.activeClassName {
+    background-color: #f4f6fa;
+    color: #0a1a25;
+    opacity: 1 !important;
+    font-weight: 700;
+}
+
+.aside>section ul li p {
+    margin-left: 0.8rem;
+}
+
+.closeSidebar {
+    width: 70px;
+}
+
+.closeSidebar p, .closeSidebar> :first-child> :first-child {
+    display: none !important;
+}
+
+.closeSidebar li {
+    justify-content: center;
+}
+
+.closeSidebar+main {
+    width: calc(100% - 70px);
+}
+
+.closeSidebar> :first-child> :last-child {
+    transform: rotate(180deg);
+}
+
+@media (max-width:992px) {
+    .closeSidebar {
+        width: 220px;
+    }
+    .closeSidebar p, .closeSidebar> :first-child> :first-child {
+        display: block !important;
+    }
+    .closeSidebar li {
+        justify-content: flex-start;
+    }
+}

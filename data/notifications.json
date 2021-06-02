@@ -1,0 +1,17 @@
+[
+    {
+        "isNew": true,
+        "title": "3 new emails",
+        "body": "From AudioHunt, Domains R Us, and Google Accounts."
+    },
+    {
+        "isNew": false,
+        "title": "4 new orders",
+        "body": "There are new orders to be fulfilled."
+    },
+    {
+        "isNew": false,
+        "title": "5 new tickets",
+        "body": "There are new tickets to be checked."
+    }
+]

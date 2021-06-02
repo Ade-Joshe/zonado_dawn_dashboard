@@ -1,0 +1,179 @@
+/* general cards */
+
+.card {
+    background-color: white;
+    border: 1px solid #dfe3eb;
+    border-radius: 5px;
+    box-shadow: 1px 0 5px 0 rgba(0, 0, 0, 0.05);
+}
+
+.card>:first-child {
+    padding: 1rem;
+    border-bottom: 1px solid #dfe3eb;
+    width: 100%;
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center;
+    min-height: 4.2rem;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.card> :nth-child(2) {
+    padding: 1rem;
+}
+
+/* counter cards */
+
+.counterCard {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid #dfe3eb;
+    box-shadow: 1px 0 5px 0 rgba(0, 0, 0, 0.05);
+}
+
+.counterCard.activeCard {
+    color: #245fff;
+    border: 1px solid #245fff !important;
+}
+
+.counterCard p {
+    font-weight: 600;
+    color: black;
+}
+
+.counterCard h3 {
+    padding-top: 1rem;
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+/* Email cards */
+
+.emailCard {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #dfe3eb;
+}
+
+.emailCard>* {
+    margin-bottom: 0.2rem;
+}
+
+.emailCard:last-child {
+    border: none;
+    margin-bottom: 0;
+}
+
+.emailCard>div:first-child {
+    display: flex;
+    align-items: center;
+}
+
+.emailCard>div:first-child *:nth-child(2) {
+    margin-left: 0.5rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.emailCard>div:first-child *:last-child, .emailCard>*:last-child {
+    margin-left: auto;
+    opacity: 0.3;
+    font-size: small;
+}
+
+.emailCard>*:last-child {
+    opacity: 0.6;
+}
+
+/* Schedule Cards */
+
+.empty {
+    border-color: transparent !important;
+    background-color: transparent !important;
+}
+
+.hasNext {
+    grid-column: 2/3;
+    grid-row: 2/4;
+}
+
+.hasPrev {
+    display: none;
+}
+
+.isActive {
+    color: #245fff !important;
+    background-color: #245fff20 !important;
+    border-left: 3px solid #245fff !important;
+}
+
+/* Task Cards */
+
+.taskCard {
+    margin-bottom: 1.2rem;
+}
+
+.checked {
+    opacity: 0;
+}
+
+.checkedInput {
+    background-color: #245fff !important;
+}
+
+.removeCard {
+    display: none !important;
+}
+
+.taskCard {
+    display: flex;
+}
+
+.taskCard>div:first-child {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    border: 0.1rem solid #dfe3eb;
+    cursor: pointer;
+}
+
+.taskCard> :nth-child(2) {
+    margin-left: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.taskCard> :nth-child(2)>div {
+    display: flex;
+    align-items: center;
+}
+
+.taskCard> :nth-child(2)>div> :nth-child(2) {
+    margin-left: auto;
+    font-size: small;
+    background-color: #f4f6fa;
+    padding: 0.2rem 0.6rem;
+    border-radius: 1rem;
+    color: #6f839c;
+    cursor: default;
+    display: flex;
+    align-self: baseline;
+}
+
+.taskCard> :nth-child(2)>div> :nth-child(2):hover {
+    opacity: 0.7;
+}
+
+.taskCard small {
+    color: #6f839c;
+    width: 100%;
+    font-size: 0.8rem;
+}
+
+.taskCard p {
+    margin-bottom: 0.2rem;
+}
