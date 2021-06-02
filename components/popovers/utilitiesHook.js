@@ -1,24 +1,31 @@
 import { useEffect } from 'react'
 
-function useOutsideAlerter(ref, close) {
+// outside area click
+function useOutsideAlerter(ref, show, close) {
+
+    function handleClickOutside(event) {
+        // console.log("i am running");
+        if (ref.current && !ref.current.contains(event.target)) {
+            if (close) close();
+        }
+        // if (close) close();
+    }
+
     useEffect(() => {
         /**
          * Run if clicked on outside of element
          */
-        function handleClickOutside(event) {
-            if (ref.current && !ref.current.contains(event.target)) {
-                if (close) close();
-            }
+        if (show) {
+            console.log("shjo")
+            // Bind the event listener
+            document.addEventListener("mousedown", handleClickOutside);
         }
-
-        // Bind the event listener
-        document.addEventListener("click", handleClickOutside);
 
         return () => {
             // Unbind the event listener on clean up
-            document.removeEventListener("click", handleClickOutside);
+            document.removeEventListener("mousedown", () => { });
         };
-    }, [ref]);
+    }, [ref, show]);
 }
 
 export { useOutsideAlerter };

@@ -38,18 +38,18 @@ export default function Home() {
           <CardWidget
             cardHeader={"Schedule"}
             btnLabel={
-              <p className={"scheduler_button"}>
+              <div className={"scheduler_button"}>
                 <p>Today </p>
                 <Image src={"/images/caretDown.svg"} width={12} height={12} />
                 <ScheduleOptions show={showSchedule} />
-              </p>
+              </div>
             }
             btnAction={() => setShowSchedule(prevState => !prevState)}
             body={
               <div className={styles.scheduleBody}>
                 {
                   schedules.map((item, index) => (
-                    <ScheduleCard item={item} index={index} />
+                    <ScheduleCard item={item} key={index} />
                   ))
                 }
               </div>
@@ -63,7 +63,7 @@ export default function Home() {
               <div>
                 {
                   tasks.map((item, index) => (
-                    <TaskCard item={item} index={index} />
+                    <TaskCard item={item} key={index} />
                   ))
                 }
               </div>

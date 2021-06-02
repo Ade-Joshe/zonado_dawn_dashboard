@@ -9,7 +9,7 @@ const ProfileDropdown = ({ show, close }) => {
     useOutsideAlerter(profileRef, close);
 
     return (
-        <div ref={profileRef} className={`${styles.dropdown} ${show ? styles.showDropDown : ""} ${styles.profileDropdown}`}>
+        <div ref={profileRef} className={`${styles.dropdown} dropdown ${show ? styles.showDropDown : ""} ${styles.profileDropdown}`}>
             <ul>
 
                 <li>My Profile</li>

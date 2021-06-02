@@ -59,6 +59,11 @@ main {
   right: 0;
 }
 
+.profileActive {
+  transform: rotate(180deg);
+  margin-top: 0.5rem;
+}
+
 .fab_block .floatingButton {
   position: fixed;
   bottom: 1.5rem;

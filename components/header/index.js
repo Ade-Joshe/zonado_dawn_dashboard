@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from '..';
 import { notifications, emailNotif } from '../../data';
 import { ProfileDropdown, Notification } from '../popovers';
@@ -13,12 +13,18 @@ const Header = ({ toggleMenu }) => {
         emailNotif: false
     });
 
-
     const toggle = (newKey) => {
-        setVisibleStates(prevState => ({
-            ...prevState,
-            [newKey]: true
-        }));
+        setVisibleStates(prevState => {
+
+            let newState = {};
+
+            for (const key in prevState) {
+                if (key !== newKey) newState = { ...newState, [key]: false }
+                else newState = { ...newState, [key]: !prevState[newKey] }
+            }
+
+            return newState
+        })
     }
 
     const handleSubmit = (e) => {
@@ -45,18 +51,28 @@ const Header = ({ toggleMenu }) => {
 
                 <div className={styles.withNotification} onClick={() => toggle("emailNotif")} >
                     <Image src={"/images/recycle.svg"} width={24} height={24} alt={"recycle"} />
-                    <Notification show={visibleStates.emailNotif} data={emailNotif} close={() => setVisibleStates(prevState => ({ ...prevState, emailNotif: false }))} />
+                    <Notification
+                        show={visibleStates.emailNotif}
+                        data={emailNotif}
+                        close={() => toggle("emailNotif")}
+                    />
                 </div>
 
                 <div className={styles.withNotification} onClick={() => toggle("notification")} >
                     <Image src={"/images/notification.svg"} width={24} height={24} alt={"notification"} />
-                    <Notification show={visibleStates.notification} data={notifications} close={() => setVisibleStates(prevState => ({ ...prevState, notification: false }))} />
+                    <Notification
+                        show={visibleStates.notification} data={notifications}
+                        close={() => setVisibleStates(prevState => ({ ...prevState, notification: false }))}
+                    />
                 </div>
 
                 <div className={styles.avatar} onClick={() => toggle("profile")} >
                     <Image src={"/images/avatar.jpeg"} width={36} height={36} alt={"user dp"} />
-                    <Image src={"/images/caretDown.svg"} width={15} height={15} alt={"caret"} className={styles.caret} />
-                    <ProfileDropdown show={visibleStates.profile} close={() => setVisibleStates(prevState => ({ ...prevState, profile: false }))} />
+                    <Image src={"/images/caretDown.svg"} width={15} height={15} alt={"caret"} className={`${visibleStates.profile ? "profileActive" : ""}`} />
+                    <ProfileDropdown
+                        show={visibleStates.profile}
+                        close={() => setVisibleStates(prevState => ({ ...prevState, profile: false }))}
+                    />
                 </div>
 
             </div>
