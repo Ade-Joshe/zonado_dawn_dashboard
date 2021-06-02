@@ -16,7 +16,7 @@ function useOutsideAlerter(ref, show, close) {
          * Run if clicked on outside of element
          */
         if (show) {
-            console.log("shjo")
+            // console.log("shjo")
             // Bind the event listener
             document.addEventListener("mousedown", handleClickOutside);
         }
